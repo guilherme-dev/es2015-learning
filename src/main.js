@@ -1,5 +1,8 @@
-//-- About hoisting
+/*
+* var, let, const
+*/
 
+// hoisting
 function fire(bool) {
 
 	//var foo;   -- hoisted to the top
@@ -42,3 +45,21 @@ names = ['Andre']; //doesn't work
 //Use const when you don't want to reasign
 //Force immutability with:
 const months = Object.freeze([]);
+
+
+
+/*
+	Default variables
+*/
+
+function applyDiscount(cost, discount = .10) {
+	return cost - (cost * discount);
+}
+
+function defaultDiscount() {
+	return .10;
+}
+
+function applyDiscount2(cost, discount = defaultDiscount()){
+	return cost - (cost * discount);
+}
