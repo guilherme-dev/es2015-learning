@@ -63,3 +63,30 @@ function defaultDiscount() {
 function applyDiscount2(cost, discount = defaultDiscount()){
 	return cost - (cost * discount);
 }
+
+
+/*
+	Rest and Spread
+*/
+//rest
+function sum(...numbers) {
+	return numbers.reduce((prev, current) =>  prev + current);
+}
+
+//spread
+function sum2(x, y){
+	return x + y;
+}
+
+let nums = [1, 2];
+console.log(sum(...nums));
+
+/*
+	Template strings
+*/
+let name = 'Foo';
+let template = `
+	<div>
+		<p>${name}</p>
+	</div>
+`.trim();
